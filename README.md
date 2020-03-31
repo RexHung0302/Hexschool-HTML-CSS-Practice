@@ -1,5 +1,7 @@
 # Hexschool-HTML-CSS-Practice
 
+成果：[點我](https://rexhung0302.github.io/Hexschool-HTML-CSS-Practice/dist/index.html)
+
 這是一份六角學院的 **HTML&CSS** 練習，內容主要為 **Flex** 切版練習，試著不用 **Bootstrap** 框架做出排版並且試做 **RWD**，另外也試著使用 **Webpack** 編譯，但設定部分還是需要改進，很多地方需要修正。
 
 有需要的朋友歡迎使用範例內的圖片，試著切版練習吧！
