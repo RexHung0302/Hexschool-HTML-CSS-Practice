@@ -1,0 +1,1 @@
+"use strict";require("../scss/all.scss"),window.onscroll=function(){myFunction()};var header=document.getElementById("layout__header"),banner__header=document.getElementById("banner__header"),sticky=banner__header.offsetTop;function myFunction(){window.pageYOffset>sticky?(console.log(123),header.classList.add("sticky")):header.classList.remove("sticky")}

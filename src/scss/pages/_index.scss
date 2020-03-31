@@ -1,0 +1,391 @@
+.article {
+    //- 最上面
+    .layout__header {
+        width: 100%;
+        z-index: 100;
+        background-color: #FFFFFF;
+        //- 上半部
+        .upPart {
+            padding: 0 10px;
+            background-color: #eee;
+            .menu {
+                .li {
+                    padding-right: 10px;
+                    margin-right: 10px;
+                    position: relative;
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        width: 1px;
+                        height: 100%;
+                        background-color: rgb(185, 185, 185);
+                        border: 1px solid rgb(185, 185, 185);
+                        right: 0;
+                    }
+                    &:last-child {
+                        padding-right: 0;
+                        margin-right: 0;
+                    }
+                    &:last-child::after {
+                        border: none;
+                        width: 0;
+                    }
+                    //- 小圖
+                    .img {
+                        padding-right: 2px;
+                    }
+                }
+                //- 臉書
+                .li.facebook {
+                    color: #3b5998;
+                }
+                //- 推特
+                .li.twitter {
+                    color: #1da1f2;
+                }
+            }
+        }
+        //- 下半部
+        .downPart {
+            //- 左半部
+            .leftPart {
+                flex-basis: 50%;
+                @include responsive-flex-basis(50%, 50%, 100%, 100%);
+            }
+            //- 右半部
+            .rightPart {
+                flex-basis: 50%;
+                @include responsive-flex-basis(50%, 50%, 0%, 0%);
+                @include responsive-hidden(auto, auto, none, none);
+                .menu {
+                    .li {
+                        padding: 0 20px;
+                        color: $Secondary;
+                    }
+                    .li.active::after {
+                        content: '';
+                        position: absolute;
+                        bottom: 0;
+                        width: 100%;
+                        height: 5px;
+                        background-color: $Secondary;
+                    }
+                }
+            }
+        }
+    }
+    //- 黏在頂部
+    .layout__header.sticky {
+        transition: all .3s;
+        position: fixed;
+        top: 0;
+        border-bottom: 2px solid #eee;
+    }
+    //- 頭部
+    .header {
+        .banngerDiv {
+            position: relative;
+            height: 500px;
+            background-image: url('../images/banner.png');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            color: #FFFFFF;
+            &__textPart {
+                background-color: #00000030;
+                padding: 40px 20px;
+                font-size: 2.5rem;
+                transition: all .5s;
+                @include responsive-font-size(2.5rem,
+                2.5rem,
+                1.5rem,
+                1.2rem);
+                @include responsive-padding(40px 20px,
+                40px 20px,
+                20px 10px,
+                10px 5px);
+                .span:last-child {
+                    padding-top: 20px;
+                }
+            }
+        }
+    }
+    //- 中間
+    .main {
+        //- 上半部
+        &__upPart {
+            .container {
+                padding: 20px;
+                //- 每一個項目
+                .imgTextBox {
+                    width: calc(100% / 3 - 80px);
+                    margin: 20px;
+                    padding: 10px 20px;
+                    box-shadow: 0px 4px 2px 2px #EEE;
+                    border-radius: 5px;
+                    @include responsive-width(calc(100% / 3 - 80px),
+                    calc(100% / 2 - 80px),
+                    calc(100% - 80px),
+                    calc(100% - 80px));
+                    transition: all .5s;
+                    //- 相片區
+                    &__imgBox {
+                        min-height: 200px;
+                    }
+                    //- 標題
+                    &__title {
+                        margin-bottom: 1rem;
+                    }
+                    //- 詳細內容
+                    &__content {
+                        line-height: 1.5rem;
+                    }
+                }
+            }
+        }
+        //- 下半部
+        &__downPart {
+            margin-bottom: 2rem;
+            .tableBox {
+                padding: 20px;
+                .table {
+                    border-collapse: collapse;
+                    width: 100%;
+                }
+                .table {
+                    thead {
+                        tr {
+                            border-bottom: 3px solid #eee;
+                            background-color: #eee;
+                        }
+                    }
+                }
+                .table,
+                tr,
+                td {
+                    border-bottom: 3px solid #eee;
+                    border-left: none;
+                    border-right: none;
+                }
+                td {
+                    padding: 10px;
+                }
+                td.greenRemind {
+                    color: $Secondary;
+                }
+            }
+            .tableBox.rwdtable {
+                .table,
+                tr,
+                td {
+                    border-bottom: none!important;
+                    border-left: none;
+                    border-right: none;
+                }
+            }
+        }
+        //- 表單區塊
+        &__fromBox {
+            /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#005a44+0,006e52+42,007f5f+72,008c68+100 */
+            background: #005a44;
+            /* Old browsers */
+            background: -moz-linear-gradient(top, #005a44 0%, #006e52 42%, #007f5f 72%, #008c68 100%);
+            /* FF3.6-15 */
+            background: -webkit-linear-gradient(top, #005a44 0%, #006e52 42%, #007f5f 72%, #008c68 100%);
+            /* Chrome10-25,Safari5.1-6 */
+            background: linear-gradient(to bottom, #005a44 0%, #006e52 42%, #007f5f 72%, #008c68 100%);
+            /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+            /* IE6-9 */
+            color: #FFFFFF;
+            padding: 20px;
+            //- 下方
+            .downPart {
+                //- 左側放相片
+                .imgBox {
+                    padding: 20px;
+                    flex-basis: 50%;
+                    background-color: #FFFFFF;
+                    border-radius: 5px;
+                    min-height: 300px;
+                    @include responsive-flex-basis(calc(50% - 40px),
+                    calc(50% - 40px),
+                    calc(100% - 40px),
+                    calc(100% - 40px));
+                    transition: all .5s;
+                }
+                //- 右側填資料
+                .inputBox {
+                    padding: 0 20px;
+                    flex-basis: 50%;
+                    @include responsive-flex-basis(calc(50% - 40px),
+                    calc(50% - 40px),
+                    calc(100% - 40px),
+                    calc(100% - 40px));
+                    @include small-pad-width {
+                        margin-top: 20px;
+                    }
+                    transition: all .5s;
+                    .input-group {
+                        &:last-child {
+                            padding-bottom: 0;
+                        }
+                        padding-bottom: 1rem;
+                        .label {
+                            margin-bottom: 10px;
+                        }
+                        .input {
+                            width: stretch;
+                            padding: 14px;
+                            border-radius: 5px;
+                            border: none;
+                        }
+                        .button {
+                            background-color: rgb(0, 197, 146);
+                            padding: 10px 20px;
+                            color: #FFFFFF;
+                            border-radius: 5px;
+                            border: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    //- 尾端
+    .footer {
+        padding: 20px;
+        //- 左邊
+        &__leftPart {
+            flex-basis: 50%;
+            @include responsive-flex-basis(50%,
+            50%,
+            100%,
+            100%);
+            transition: all .5s;
+        }
+        //- 右邊
+        &__rightPart {
+            flex-basis: 50%;
+            @include responsive-flex-basis(50%,
+            50%,
+            0%,
+            0%);
+            @include responsive-hidden(auto,
+            auto,
+            none,
+            none);
+            transition: all .5s;
+            .content {
+                width: fit-content;
+                margin: 0 0 0 auto;
+            }
+        }
+    }
+}
+
+//- 修改 Table
+@include small-pad-width {
+    .rwdtable {
+        border: 0;
+        caption {
+            font-size: 1.3em;
+        }
+        thead {
+            border: none;
+            clip: rect(0 0 0 0);
+            height: 1px;
+            margin: -1px;
+            overflow: hidden;
+            padding: 0;
+            position: absolute;
+            width: 1px;
+        }
+        tr {
+            border: 2px solid #000!important;
+            background-color: lightgrey;
+            border-bottom: 3px solid #ddd;
+            display: block;
+            margin-bottom: 1rem;
+            &:nth-child(odd) {
+                background-color: #eee;
+                td {
+                    border-bottom: 2px solid #FFFFFF!important;
+                }
+            }
+            &:nth-child(even) {
+                background-color: #FFFFFF;
+            }
+        }
+        td {
+            color: #D20B2A;
+            border-bottom: 2px solid #ddd;
+            display: block;
+            font-size: .8em;
+            text-align: right;
+            border: none;
+        }
+        td:before {
+            color: black;
+            content: attr(data-label);
+            float: left;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        td:last-child {
+            border-bottom: 0;
+        }
+    }
+}
+
+@include phone-width {
+    .rwdtable {
+        border: 0;
+        caption {
+            font-size: 1.3em;
+        }
+        thead {
+            border: none;
+            clip: rect(0 0 0 0);
+            height: 1px;
+            margin: -1px;
+            overflow: hidden;
+            padding: 0;
+            position: absolute;
+            width: 1px;
+        }
+        tr {
+            border: 2px solid #000!important;
+            background-color: lightgrey;
+            border-bottom: 3px solid #ddd;
+            display: block;
+            margin-bottom: 1rem;
+            &:nth-child(odd) {
+                background-color: #eee;
+                td {
+                    border-bottom: 2px solid #FFFFFF!important;
+                }
+            }
+            &:nth-child(even) {
+                background-color: #FFFFFF;
+            }
+        }
+        td {
+            color: #D20B2A;
+            border-bottom: 2px solid #ddd;
+            display: block;
+            font-size: .8em;
+            text-align: right;
+            border: none;
+        }
+        td:before {
+            color: black;
+            content: attr(data-label);
+            float: left;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        td:last-child {
+            border-bottom: 0;
+        }
+    }
+}

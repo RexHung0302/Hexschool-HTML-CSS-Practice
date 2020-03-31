@@ -1,0 +1,50 @@
+{
+    "name": "hexschool-html-css-practice",
+    "version": "1.0.0",
+    "description": "Hexschool Html&CSS Practice",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "build": "webpack --mode=production",
+        "build:dev": "webpack --mode=development",
+        "start:dev": "webpack-dev-server --mode=development",
+        "watch": "webpack --watch --mode development"
+    },
+    "keywords": [
+        "hexschool",
+        "html",
+        "css",
+        "practice"
+    ],
+    "author": "rexhung0302",
+    "license": "ISC",
+    "devDependencies": {
+        "@babel/core": "^7.9.0",
+        "@babel/preset-env": "^7.9.0",
+        "autoprefixer": "^9.7.5",
+        "babel-loader": "^8.1.0",
+        "clean-webpack-plugin": "^3.0.0",
+        "css-loader": "^3.4.2",
+        "cssnano": "^4.1.10",
+        "glob": "^7.1.6",
+        "html-loader": "^1.0.0",
+        "html-webpack-plugin": "^4.0.3",
+        "html-withimg-loader": "^0.1.16",
+        "image-webpack-loader": "^6.0.0",
+        "mini-css-extract-plugin": "^0.9.0",
+        "node-sass": "^4.13.1",
+        "optimize-css-assets-webpack-plugin": "^5.0.3",
+        "postcss-loader": "^3.0.0",
+        "pug": "^2.0.4",
+        "pug-loader": "^2.4.0",
+        "purgecss-webpack-plugin": "^2.1.0",
+        "sass-loader": "^8.0.2",
+        "terser-webpack-plugin": "^2.3.5",
+        "webpack": "^4.42.1",
+        "webpack-cli": "^3.3.11"
+    },
+    "dependencies": {
+        "file-loader": "^6.0.0",
+        "url-loader": "^4.0.0"
+    }
+}

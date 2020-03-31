@@ -1,0 +1,216 @@
+/* 共同 Class & 全域 CSS */
+
+html,
+body {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    min-width: 320px;
+}
+
+
+/* 共用 Class */
+
+.h-100 {
+    height: 100%;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.vw-100 {
+    width: 100vw;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.overflow-hidden {
+    overflow: hidden;
+}
+
+.word-break-all {
+    word-break: break-all;
+}
+
+input:focus,
+select:focus,
+button:focus {
+    outline: none
+}
+
+.overflow-hidden {
+    overflow: hidden;
+}
+
+.overflow-auto {
+    overflow: auto;
+}
+
+.align-items-flex-start {
+    align-items: flex-start;
+}
+
+.justify-content-space-around {
+    justify-content: space-around;
+}
+
+.justify-content-flex-start {
+    justify-content: flex-start;
+}
+
+.justify-content-flex-end {
+    justify-content: flex-end;
+}
+
+.m-auto {
+    margin: 0 auto;
+}
+
+.whiteRemind {
+    color: white;
+}
+
+.redRemind {
+    color: #C80000;
+}
+
+.pinkRemind {
+    color: rgb(237, 34, 115)
+}
+
+.text-ellipsis {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.blackRemind {
+    color: #000000;
+}
+
+.height-auto {
+    height: auto;
+}
+
+.max-height-auto {
+    max-height: auto;
+}
+
+.max-height-none {
+    max-height: none;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.d-block {
+    display: block;
+}
+
+.justify-content-center {
+    justify-content: center;
+}
+
+.justify-content-flex-start {
+    justify-content: flex-start;
+}
+
+.justify-content-flex-end {
+    justify-content: flex-end;
+}
+
+.justify-content-space-between {
+    justify-content: space-between;
+}
+
+.justify-content-space-around {
+    justify-content: space-around;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.align-items-flex-start {
+    align-items: flex-start;
+}
+
+.align-items-flex-end {
+    align-items: flex-end;
+}
+
+.flex-direction-row {
+    flex-direction: row;
+}
+
+.flex-direction-row-reverse {
+    flex-direction: row-reverse;
+}
+
+.flex-direction-column {
+    flex-direction: column;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+.none-list-style {
+    list-style: none;
+}
+
+.pl-0 {
+    padding-left: 0;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.m-0 {
+    margin: 0;
+}
+
+.mt-0 {
+    margin-top: 0;
+}
+
+.mb-0 {
+    margin-bottom: 0;
+}
+
+.mt-2 {
+    margin-top: 2rem;
+}
+
+.pr-2 {
+    padding-right: 2rem;
+}
+
+.pl-1 {
+    padding-left: 1rem;
+}
+
+.pl-2 {
+    padding-left: 2rem;
+}
+
+.font-weight-bold {
+    font-weight: bold;
+}
+
+.position-relative {
+    position: relative;
+}

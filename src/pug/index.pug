@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title 使用 HTML、CSS 開發一個網站
+  body
+    article.article
+      //- 最頂部
+      .layout__header.d-flex.flex-direction-column.w-100(id="layout__header")
+        //- 上半部
+        .upPart.d-flex.align-items-center.justify-content-flex-end
+          ul.menu.none-list-style.d-flex.pl-0
+            li.li.facebook.cursor-pointer.d-flex.align-items-center.justify-content-center
+              img.img(src="../../src/images/facebookIcon.png")
+              span 粉絲團
+            li.li.twitter.cursor-pointer.d-flex.align-items-center.justify-content-center
+              img.img(src="../../src/images/twitterIcon.png")
+              span 追蹤我們
+        //- 下半部
+        .downPart.d-flex
+          //- 左半邊
+          .leftPart
+            img(src="../../src/images/logo.png", alt="logo")
+          //- 右半邊
+          .rightPart.d-flex.align-items-center.justify-content-flex-end
+            ul.menu.none-list-style.d-flex.pl-0.m-0.h-100.position-relative
+              li.h-100.li.cursor-pointer.position-relative.d-flex.align-items-center.justify-content-center.active
+                span.font-weight-bold 首頁
+              li.h-100.li.cursor-pointer.position-relative.d-flex.align-items-center.justify-content-center
+                span.font-weight-bold 產品介紹
+              li.h-100.li.cursor-pointer.position-relative.d-flex.align-items-center.justify-content-center
+                span.font-weight-bold 聯絡我們
+      //- 頭部 Banner
+      header.header(id="banner__header")
+        .banngerDiv.d-flex.align-items-center.justify-content-flex-start.h-100.flex-wrap
+          .banngerDiv__textPart.w-100
+            span.span.d-block.w-100 六角學院
+            span.span.d-block.w-100 讓您奠定良好的前端基礎
+      //- 中間
+      main.main
+        //- 上方圖文
+        .main__upPart
+          .container.d-flex.flex-wrap
+            //- 每一個項目
+            .imgTextBox.text-center
+              .imgTextBox__imgBox.d-flex.align-items-center.justify-content-center
+                img(src="../../src/images/html.png")
+              h5.imgTextBox__title Html 5 基礎教學
+              .imgTextBox__content.text-left
+                span 主流前端網站設計的基礎就在六角學院，在這裡不在是填鴨式教學，而是透過實際的範例，瞭解正確的網站開發流程，講師均具有業界開發經驗，讓學員學習業界主流的開發方法。
+            //- 每一個項目
+            .imgTextBox.text-center
+              .imgTextBox__imgBox.d-flex.align-items-center.justify-content-center
+                img(src="../../src/images/rwd.png")
+              h5.imgTextBox__title 響應式網站設定
+              .imgTextBox__content.text-left
+                span 響應式網站設計(Responsive webdesign)，目前大多使用者均是以手機瀏覽的情況下，響應式網站已經是必備的・六角學院將會提供業界響應式開發方法，讓學生瞭解行動版開發技巧。
+            //- 每一個項目
+            .imgTextBox.text-center
+              .imgTextBox__imgBox.d-flex.align-items-center.justify-content-center
+                img(src="../../src/images/jQuery.png")
+              h5.imgTextBox__title jQuery 實戰教學
+              .imgTextBox__content.text-left
+                span.d-block 本課程有以下特色
+                ul.mt-0.mb-0
+                  li 瞭解變數的使用方法
+                  li 學習並操作 DOM
+                  li 學習基本數學運算方法
+                  li 套件的操作及運用
+        //- 中間表格
+        .main__downPart
+          h5.text-center.mb-0 線上及實體課程的差異
+          .tableBox
+            table.table.rwdtable(border='1')
+              thead
+                tr
+                  td 項目
+                  td Hex School 線上課程
+                  td 一般線上課程
+                  td 實體課程
+              tbody
+                tr
+                  td(data-label="項目") 費用
+                  td.greenRemind(data-label="Hex School 線上課程") 較低
+                  td.greenRemind(data-label="一般線上課程") 較低
+                  td(data-label="實體課程") 較高
+                tr
+                  td(data-label="項目") 學習效果
+                  td(data-label="Hex School 線上課程") 一般
+                  td(data-label="一般線上課程") 較低
+                  td.greenRemind(data-label="實體課程") 很好
+                tr
+                  td(data-label="項目") Code review
+                  td.greenRemind(data-label="Hex School 線上課程") 有
+                  td(data-label="一般線上課程") 無
+                  td(data-label="實體課程") 不一定
+                tr
+                  td(data-label="項目") 課程更新速度
+                  td.greenRemind(data-label="Hex School 線上課程") 普通
+                  td.greenRemind(data-label="一般線上課程") 普通
+                  td(data-label="實體課程") 較慢
+                tr
+                  td(data-label="項目") 多次複習
+                  td.greenRemind(data-label="Hex School 線上課程") 可
+                  td(data-label="一般線上課程") 可
+                  td(data-label="實體課程") 不可
+                tr
+                  td(data-label="項目") 字幕
+                  td.greenRemind(data-label="Hex School 線上課程") 有
+                  td(data-label="一般線上課程") 不一定
+                  td(data-label="實體課程") 板書
+
+        //- 表單區
+        .main__fromBox
+          .upPart
+            h5.mb-0.text-center 對我們課程有興趣嗎？
+            h5.text-center 歡迎留下您的資料
+          .downPart.d-flex.flex-wrap
+            //- 左側
+            .imgBox
+            //- 右側
+            .inputBox
+              .input-group
+                label.label.d-block.w-100.font-weight-bold 姓名
+                input.input(placeholder="請輸入姓名")
+              .input-group
+                label.label.d-block.w-100.font-weight-bold 電話
+                input.input(placeholder="請輸入電話")
+              .input-group
+                label.label.d-block.w-100.font-weight-bold 信箱
+                input.input(placeholder="請輸入信箱")
+              .input-group.text-right
+                button.button(type="button") 送出
+      //- 尾部
+      footer.footer.d-flex
+        //- 左邊
+        .footer__leftPart
+          img(src="../../src/images/footerLogo.png")
+        //- 右邊
+        .footer__rightPart
+          .content
+            span.d-block 聯絡我們：
+              span.pinkRemind hexschool@gmail.com
+            span.d-block 電話：
+              span.pinkRemind 0999123456
