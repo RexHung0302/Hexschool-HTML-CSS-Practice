@@ -1,4 +1,4 @@
-# Hexschool-HTML&CSS-Practice
+# Hexschool-HTML-CSS-Practice
 
 這是一份六角學院的 **HTML&CSS** 練習，內容主要為 **Flex** 切版練習，試著不用 **Bootstrap** 框架做出排版並且試做 **RWD**，另外也試著使用 **Webpack** 編譯，但設定部分還是需要改進，很多地方需要修正。
 
@@ -15,7 +15,7 @@
 ```
 1. $ git clone https://github.com/RexHung0302/Hexschool-HTML-CSS-Practice.git
 
-2. $ cd Hexschool-HTML&CSS-Practice
+2. $ cd Hexschool-HTML-CSS-Practice
 
 3. $ npm install
 
